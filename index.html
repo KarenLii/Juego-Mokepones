@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+	<title>Juego Mokepon</title>
+</head>
+<body>
+	<section id="seleccionar-mascota">
+        <h1 class="title">¡Ven y juega Mokepon!</h1>
+        <h2 class="subtitle">Elige tú ataque:</h2>
+
+        <div id="contenedorTarjetas" class="tarjetas">
+            <!--
+            <input type="radio" name="mascota" id="Hipodoge"/>
+            <label class="tarjeta-de-mokepon" for="Hipodoge">
+                <p>Hipodoge</p>
+                <img src="./Hipodoge.png" alt="Animalito">
+            </label>
+
+            <input type="radio" name="mascota" id="Capipepo"/>
+            <label class="tarjeta-de-mokepon"  for="Capipepo">
+                <p>Capipepo</p>
+                <img src="./Capipepo.png" alt="Animalito">
+            </label>
+
+            <input type="radio" name="mascota" id="Ratigueya"/>
+            <label class="tarjeta-de-mokepon"  for="Ratigueya">
+                <p>Ratigueya</p>
+                <img src="./Ratigueya.png" alt="Animalito">
+            </label>
+
+            <input type="radio" name="mascota" id="Langostelvis"/> <label class="tarjeta-de-mokepon"  for="Langostelvis">
+                <p>Langostelvis</p>
+                <img src="./Langostelvis.png" alt="Animalito">
+            </label>
+
+            <input type="radio" name="mascota" id="Tucapalma"/>
+            <label class="tarjeta-de-mokepon"  for="Tucapalma">
+                <p>Tucapalma</p>
+                <img src="./Tucapalma.png" alt="Animalito">
+            </label>
+
+            <input type="radio" name="mascota" id="Pydos"/>
+            <label class="tarjeta-de-mokepon"  for="Pydos">
+                <p>Pydos</p>
+                <img src="./Pydos.png" alt="Animalito">
+            </label>
+            -->
+        </div>
+
+        <!--- Hipodoge -> Agua
+        Capipepo -> Tierra
+        Ratigueya -> Fuego
+        Langostelvis -> Agua y Fuego
+        Tucapalma -> Agua y Tierra 
+        Pydos -> Tierra y Fuego -->
+
+        <button id="boton-seleccionar">Continuar</button>
+    </section>
+
+    <section id="ver-mapa">
+        <h2 class="subtitle">¡Recorre el mapa con tú Mokepon!</h2>
+        <canvas id="mapa"></canvas>
+        <div>
+            <button onmouseup="detenerMovimiento()" id="mover-botones" onmousedown="moverArriba()">🡹</button>
+        </div>
+        <div>
+            <button onmouseup="detenerMovimiento()" id="mover-botones" onmousedown="moverIzquierda()">🡸</button>
+            <button onmouseup="detenerMovimiento()" id="mover-botones" onmousedown="moverAbajo()">🡻</button>
+            <button onmouseup="detenerMovimiento()" id="mover-botones" onmousedown="moverDerecha()">🡺</button>
+        </div>
+    </section>
+
+    <section id="seleccionar-ataque">
+        <div class="inicio-de-ataque">
+            <h2 class="subtitle">Elige tú ataque:</h2>
+        
+            <div id="contenedorAtaques" class="tarjetas-de-ataques">
+                <!--- <button id="boton-fuego" class="boton-de-ataque">Fuego 🔥</button>
+                <button id="boton-agua" class="boton-de-ataque">Agua 💧</button>
+                <button id="boton-tierra" class="boton-de-ataque">Tierra 🌵</button>-->
+            </div>
+            
+            <div id="mensajes">
+                    <p id="resultado">Qué empiece el combate: </p>
+                    
+                    <section id="reiniciar">
+                        <button id="boton-reiniciar">Reiniciar juego</button>
+                    </section>
+            </div>
+            <div class="ataques">
+                <div class="ataques-jugador">
+                    <p id="vidas-jugador">0</p>
+                    <p id="mascota-jugador"></p>
+                    <img id="imagen-jugador" src="" alt="">
+                    <div id="ataques-del-jugador"></div>
+                </div>
+                <div class="ataques-enemigo">
+                    <p id="vidas-enemigo">0</p>
+                    <p id="mascota-enemigo"></p>
+                    <img id="imagen-enemigo" src="" alt="">
+                    <div id="ataques-del-enemigo"></div>
+                </div>
+            </div>
+        </div> 
+    </section>
+    <script src="./js/codigo.js"></script>
+</body>
+</html>
